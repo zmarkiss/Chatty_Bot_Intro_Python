@@ -1,0 +1,50 @@
+def greeting(name, year):
+    print(f"Hello! My name is {name }.")
+    print(f"I was created in {year}.")
+
+
+def remind_name():
+    print('Please, remind me your name.')
+    user_name = input()
+    print(f"What a great name you have {user_name}!")
+
+
+def guess_age():
+    print("Let me guess your age.\nEnter remainders of dividing your age by 3, 5 and 7.")
+    remainder3 = int(input())
+    remainder5 = int(input())
+    remainder7 = int(input())
+    age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
+    print(f"Your age is {age} that's a good time to start programming!")
+
+
+def count():
+    print("Now I will prove to you that I can count to any number you want.")
+    user_count = int(input())
+    count_start = 0
+    while count_start <= user_count:
+        print(count_start, "!", end=" \n")
+        count_start += 1
+
+
+def test():
+    print("Let's test your programming knowledge.\nWhy do we use methods?")
+    print(f"{1}. To repeat a statement multiple times.\n"
+          f"{2}. To decompose a program into several small subroutines.\n"
+          f"{3}. To determine the execution time of a program.\n"
+          f"{4}. To interrupt the execution of a program.")
+    while True:
+        choice = int(input())
+        if choice != 2:
+            print("Please, try again.")
+            continue
+        elif choice == 2:
+            print('Congratulations, have a nice day!')
+            break
+
+
+greeting("Chatty Bot", '2023')
+remind_name()
+guess_age()
+count()
+test()
